@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation_main"
+            app:startDestination="@id/repoListFragment">
+
+    <activity android:id="@+id/mainActivity" android:name="com.famian.githubapp.ui.MainActivity"
+              android:label="activity_main" tools:layout="@layout/activity_main"/>
+    <fragment android:id="@+id/repoListFragment" android:name="com.famian.githubapp.ui.list.RepoListFragment"
+              android:label="fragment_repo_list" tools:layout="@layout/fragment_repo_list">
+        <action android:id="@+id/action_repoListFragment_to_repoDetailFragment"
+                app:destination="@id/repoDetailFragment"/>
+    </fragment>
+    <fragment android:id="@+id/repoDetailFragment" android:name="com.famian.githubapp.ui.RepoDetailFragment"
+              android:label="fragment_repo_detail" tools:layout="@layout/fragment_repo_detail">
+        <action android:id="@+id/action_repoDetailFragment_to_repoListFragment" app:destination="@id/repoListFragment"/>
+        <argument android:name="repoId" app:argType="long"/>
+    </fragment>
+</navigation>

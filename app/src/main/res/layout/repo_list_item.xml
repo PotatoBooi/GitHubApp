@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+app:strokeColor="#CCCCCC"
+app:strokeWidth="1dp"
+app:cardCornerRadius="4dp"
+android:minHeight="100dp"
+android:layout_margin="4dp"
+android:id="@+id/repoListItem">
+    <androidx.constraintlayout.widget.ConstraintLayout
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+
+        <TextView
+                android:text="Hello World"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewRepoTitle"
+                tools:text="Hello World"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintGuide_begin="16dp" android:id="@+id/guideline"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintGuide_begin="16dp" android:id="@+id/guideline2"/>
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/guideline3" app:layout_constraintGuide_end="16dp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:srcCompat="@drawable/ic_star_black_24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                android:id="@+id/imageViewStar"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRepoTitle" android:layout_marginTop="16dp"/>
+        <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp" app:srcCompat="@drawable/circle_shape"
+                android:id="@+id/imageViewLanguageColor"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/textViewRepoTitle"
+                app:layout_constraintStart_toEndOf="@+id/textViewStars"
+                android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="Kotlin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewLanguage" app:layout_constraintStart_toEndOf="@+id/imageViewLanguageColor"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/imageViewLanguageColor"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewLanguageColor"/>
+        <TextView
+                android:text="21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewStars" app:layout_constraintStart_toEndOf="@+id/imageViewStar"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/imageViewStar"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewStar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
