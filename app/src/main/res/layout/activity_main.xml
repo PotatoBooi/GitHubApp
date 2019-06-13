@@ -14,8 +14,7 @@
               android:name="androidx.navigation.fragment.NavHostFragment"
               app:defaultNavHost="true"
               app:navGraph="@navigation/navigation_main"
-
-              tools:layout="@layout/fragment_repo_list"
+              tools:layout="@layout/fragment_search_repo"
               app:layout_anchorGravity="bottom"
               app:layout_anchor="@id/toolbar"
               android:layout_gravity="bottom"

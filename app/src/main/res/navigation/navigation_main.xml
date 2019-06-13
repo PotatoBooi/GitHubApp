@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation_main"
-            app:startDestination="@id/repoListFragment">
+            app:startDestination="@id/searchRepoFragment">
 
     <activity android:id="@+id/mainActivity" android:name="com.famian.githubapp.ui.MainActivity"
               android:label="activity_main" tools:layout="@layout/activity_main"/>
@@ -11,9 +11,13 @@
         <action android:id="@+id/action_repoListFragment_to_repoDetailFragment"
                 app:destination="@id/repoDetailFragment"/>
     </fragment>
-    <fragment android:id="@+id/repoDetailFragment" android:name="com.famian.githubapp.ui.RepoDetailFragment"
+    <fragment android:id="@+id/repoDetailFragment" android:name="com.famian.githubapp.ui.search.RepoDetailFragment"
               android:label="fragment_repo_detail" tools:layout="@layout/fragment_repo_detail">
         <action android:id="@+id/action_repoDetailFragment_to_repoListFragment" app:destination="@id/repoListFragment"/>
         <argument android:name="repoId" app:argType="long"/>
+    </fragment>
+    <fragment android:id="@+id/searchRepoFragment" android:name="com.famian.githubapp.ui.search.SearchRepoFragment"
+              android:label="SearchRepoFragment" tools:layout="@layout/fragment_search_repo">
+        <action android:id="@+id/action_searchRepoFragment_to_repoListFragment" app:destination="@id/repoListFragment"/>
     </fragment>
 </navigation>
