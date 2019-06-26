@@ -6,18 +6,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.MainActivity">
-    <include
-            layout="@layout/appbar"
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:title="GitHub"
+            android:id="@+id/toolbar"
+            android:elevation="4dp"
     />
-    <fragment android:id="@+id/nav_host_fragment"
-              android:layout_width="match_parent" android:layout_height="wrap_content"
+    <fragment android:layout_marginTop="?actionBarSize"
+              android:id="@+id/nav_host_fragment"
+              android:layout_width="match_parent" android:layout_height="match_parent"
               android:name="androidx.navigation.fragment.NavHostFragment"
               app:defaultNavHost="true"
               app:navGraph="@navigation/navigation_main"
-              tools:layout="@layout/fragment_search_repo"
-              app:layout_anchorGravity="bottom"
-              app:layout_anchor="@id/toolbar"
-              android:layout_gravity="bottom"
+              tools:layout="@layout/fragment_search_user"
+              app:layout_anchorGravity="top"
+
+              android:layout_gravity="center"
 
 
     />

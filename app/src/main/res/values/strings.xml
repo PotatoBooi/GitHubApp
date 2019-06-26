@@ -3,4 +3,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="LOCATION">Location: %s</string>
+    <string name="COMPANY">Company: %s</string>
+    <string name="FOLLOWERS">Followers: %s</string>
+    <string name="FOLLOWING">Following: %s</string>
+    <string name="REPOSITORIES">Repositories: %s</string>
 </resources>

@@ -11,6 +11,7 @@ class RepoItem(private val repo: Repository) : Item() {
         viewHolder.apply {
             textViewRepoTitle.text = repo.title
             textViewLanguage.text = repo.language
+            textViewStars.text = repo.stars.toString()
         }
     }
 

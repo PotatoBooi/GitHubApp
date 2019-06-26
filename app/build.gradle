@@ -47,7 +47,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
 
-
     //material design
     implementation "com.google.android.material:material:$material_version"
 
@@ -65,5 +64,8 @@ dependencies {
     //kodein
     implementation "org.kodein.di:kodein-di-generic-jvm:$kodein_version"
     implementation "org.kodein.di:kodein-di-framework-android-x:$kodein_version"
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
 }
